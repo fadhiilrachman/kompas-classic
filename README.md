@@ -1,2 +1,2 @@
-# kompas-classic
+# KOMPAS Classic
 Challenge accepted.
