@@ -38,4 +38,4 @@ Account login information:
 - Email: devs@icloud.com
 - Password: devs
 
-You can access the website at [localhost](http://localhost)
+You can access the website at [http://localhost](http://localhost).
