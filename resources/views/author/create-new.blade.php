@@ -12,9 +12,17 @@
             <div class="card">
                 <div class="card-header">{{ __('Buat Artikel Baru') }}</div>
                 <div class="card-body">
-                    <form action="{{ route('article.create') }} " method="post">
+                    <form action="{{ route('article.create') }}" method="post">
+                        @if ($errors->any())
+                            <div class="alert alert-danger" role="alert">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         @csrf
-                        <input type="hidden" name="author_id" value="{{ Auth::id() }}">
                         <div class="form-group">
                             <label for="title">Judul</label>
                             <input type="text" class="form-control" name="title" id="title" placeholder="Masukkan judul artikel">
@@ -25,7 +33,7 @@
                         </div>
                         <div class="form-group">
                             <label for="content">Konten</label>
-                            <textarea class="form-control" name="content" id="content" placeholder="Isi konten artikel disini" cols="30" rows="5"></textarea>
+                            <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Terbitkan Artikel</button>
                     </form>

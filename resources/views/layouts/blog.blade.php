@@ -9,23 +9,9 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
-        <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-            }
-        }
-        </style>
-        <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="container">
@@ -40,7 +26,7 @@
                     <div class="col-4 d-flex justify-content-end align-items-center">
                         @if (Route::has('login'))
                             @auth
-                                <a href="{{ url('/home') }}" class="btn btn-sm btn-outline-secondary">Dashboard</a>
+                                <a href="{{ route('author.home') }}" class="btn btn-sm btn-outline-secondary">Dashboard</a>
                             @else
                                 <a href="{{ route('login') }}" class="btn btn-sm btn-outline-secondary">Login</a>
                             @endauth
@@ -49,9 +35,6 @@
                 </div>
             </header>
             <div class="nav-scroller py-1 mb-2">
-                <nav class="nav d-flex justify-content-between">
-                    <a class="p-2 link-secondary" href="#">World</a>
-                </nav>
             </div>
         </div>
         <main class="container">

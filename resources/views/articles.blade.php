@@ -8,7 +8,7 @@
             <div class="col p-4 d-flex flex-column position-static">
                 <strong class="d-inline-block mb-2 text-success">{{ $article->category }}</strong>
                 <h3 class="mb-0">{{ $article->title }}</h3>
-                <div class="mb-1 text-muted">{{ $article->created_at }}</div>
+                <div class="mb-1 text-muted">{{ $article->created_at->format('d M Y') }}</div>
                 <a href="{{ route('article.view', $article->article_id) }}" class="stretched-link">Continue reading</a>
             </div>
         </div>
