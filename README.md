@@ -1,4 +1,4 @@
-# KOMPAS Classic
+# Magazine Classic
 Challenge accepted.
 
 ----
